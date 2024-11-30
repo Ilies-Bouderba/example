@@ -6,6 +6,11 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1>This is my Home page</h1>
+    <nav>
+        <a href="/">Home Page</a>
+        <a href="/contact">Contact Page</a>
+        <a href="/about">About Page</a>
+    </nav>
+    {{ $slot }}
 </body>
 </html>
