@@ -16,9 +16,9 @@
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <x-nav-link href="/" type="a" :active="request()->is('/')">Home</x-nav-link>
-            <x-nav-link href="/about" type="button" :active="request()->is('about')">About</x-nav-link>
-            <x-nav-link href="/contact" type="a" :active="request()->is('contact')">Contact</x-nav-link>
+            <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+            <x-nav-link href="/jobs" :active="request()->is('job')">Jobs</x-nav-link>
+            <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
           </div>
         </div>
       </div>
@@ -30,9 +30,10 @@
 
 <div class="py-24 sm:py-4">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{{ $heading }}</h2>
+    <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{{ $heading ?? '' }}</h2>
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <p class="mt-2 text-lg/8 text-gray-600">{{ $slot }}</p>
+      <p class="mt-2 text-lg/8 text-gray-600">{{ $slot ?? '' }}</p>
+        <p class="mt-2 text-lg/8 text-gray-600">{{ $jobs ?? '' }}</p>
     </div>
   </div>
 </div>
