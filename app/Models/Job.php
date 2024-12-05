@@ -9,12 +9,12 @@ class Job {
             [
                 'id' => 1,
                 'title' => 'director',
-                'salary'=> '$50.000',
+                'salary'=> '50.000',
             ],
             [  
                 'id'=> 2,
                 'title' => 'teacher',
-                'salary' => '$40.000',
+                'salary' => '40.000',
             ]
         ];
     }
