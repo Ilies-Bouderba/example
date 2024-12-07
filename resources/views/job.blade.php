@@ -10,8 +10,9 @@
             <h1 class="text-xl font-semibold mb-4">About This Job:</h1>
             <ul class="space-y-4">
                     <li class="bg-white p-4 rounded shadow-md">
+                        <h1>{{ $job->employee->name }} </h1>
                         <h3 class="text-lg font-semibold">{{$job['title']}}</h3>
-                        <p>Salary: ${{$job['salary']}}</p>
+                        <p>Salary: {{$job['salary']}}</p>
                     </li>
             </ul>
             @else
