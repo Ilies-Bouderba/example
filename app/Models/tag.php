@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class tag extends Model
 {
-    /** @use HasFactory<\Database\Factories\EmployeeFactory> */
+    /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
-    protected $fillable = ['name'];
 
     public function job() {
-        return $this->hasMany(JobListing::class);
+        return $this->belongsToMany(JobListing::class, "tags_job", "tag_id", "job_listing_id");
     }
 }
