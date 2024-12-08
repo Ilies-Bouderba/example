@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        Job Listings
+        Job Information
     </x-slot:heading>
 
     <x-slot:jobs>

@@ -10,7 +10,7 @@ class JobListing extends Model
     /** @use HasFactory<\Database\Factories\JobListingFactory> */
     use HasFactory;
     protected $table = "JobListing";
-    protected $fillable = ['title', 'salary'];
+    protected $fillable = ['title', 'salary', 'employee_id'];
 
     public function Employee() {
         return $this->belongsTo(Employee::class);
@@ -18,6 +18,6 @@ class JobListing extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany(Tag::class, "tags_job", "job_listing_id", relatedPivotKey: "tag_id");
+        return $this->belongsToMany(\App\Models\tag::class, "tags_job", "job_listing_id", relatedPivotKey: "tag_id");
     }
 }
