@@ -11,16 +11,15 @@
             <ul class="space-y-4">
                     <li class="bg-white p-4 rounded shadow-md">
                         <h1>{{ $job->employee->name }} </h1>
-                        <h3 class="text-lg font-semibold">{{$job['title']}}</h3>
-                        <p>Salary: {{$job['salary']}}</p>
+                        <h3 class="text-lg font-semibold">{{$job->title }}</h3>
+                        <p>Salary: {{$job->title }}</p>
                     </li>
             </ul>
             @else
                 <h1 class="text-xl font-semibold mb-4">There is no Available Info About this Jobs</h1>
              @endif
 
-            
-
+            <a href="/job/{{$job->id}}/edit">Edit Job</a>
         </div>
     </x-slot:jobs>
 
